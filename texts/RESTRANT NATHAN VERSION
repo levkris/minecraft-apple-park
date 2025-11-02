@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Sign - Rainbow</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: rainbow 8s linear infinite;
+            background-size: 600% 600%;
+        }
+
+        @keyframes rainbow {
+            0% { background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, purple); }
+            25% { background: linear-gradient(45deg, orange, yellow, green, cyan, blue, purple, red); }
+            50% { background: linear-gradient(45deg, yellow, green, cyan, blue, purple, red, orange); }
+            75% { background: linear-gradient(45deg, green, cyan, blue, purple, red, orange, yellow); }
+            100% { background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, purple); }
+        }
+
+        .sign {
+            width: 80%;
+            max-width: 900px;
+            background: white;
+            padding: 25px 40px;
+            border-radius: 12px;
+            border: 4px solid #000;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sign h1 {
+            margin: 0;
+            font-size: 2.7rem;
+            letter-spacing: 3px;
+            text-align: center;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sign">
+        <h1>RESTAURANT</h1>
+    </div>
+
+</body>
+</html>
