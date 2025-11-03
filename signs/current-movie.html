@@ -34,16 +34,21 @@
     <h1 id="current-type"></h1>
     <h1 id="current-name"></h1>
     <script>
-        fetch('movie.json')
-            .then(response => response.json())
-            .then(data => {
-                const currentTypeElement = document.getElementById('current-type');
-                currentTypeElement.innerText = `CURRENT ${data.type.toUpperCase()}`;
+        function checkCurrentMovie() {
+            fetch('movie.json')
+                .then(response => response.json())
+                .then(data => {
+                    const currentTypeElement = document.getElementById('current-type');
+                    currentTypeElement.innerText = `CURRENT ${data.type.toUpperCase()}`;
 
-                const currentNameElement = document.getElementById('current-name');
-                currentNameElement.innerText = data.name.toUpperCase();
-            })
-            .catch(error => console.log(error));
+                    const currentNameElement = document.getElementById('current-name');
+                    currentNameElement.innerText = data.name.toUpperCase();
+                })
+                .catch(error => console.log(error));
+        }
+
+        checkCurrentMovie();
+        setInterval(checkCurrentMovie, 60000);
     </script>
 </body>
 </html>
